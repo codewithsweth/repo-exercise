@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .positionCart {
+        position: fixed;
+        top: 20px;
+        right: 50px;
+        background-color: white;
+      }
+      #cartCart {
+        position: absolute;
+        top: 10px;
+        right: 100px;
+        transform: scale(3.5);
+      }
+      #counter {
+        position: absolute;
+        top: 10px;
+        right: 18px;
+        font-size: 5px;
+        font-weight: 700;
+        color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="row text-end" id="cartCart">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-cart"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+            />
+          </svg>
+          <div id="counter">0</div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <button class="btn btn-success addItem">Add to cart</button>
+        <button class="btn btn-danger removeItem">Remove Item</button>
+      </div>
+    </div> -->
+    <div class="container my-5">
+      <h1>Assignment and coding challenges</h1>
+      <button class="btn btn-primary alertOn">Alert</button>
+      <button class="btn btn-primary scrollBottom">Bottom</button>
+      <!-- 2 items -->
+      <div class="row my-5">
+        <!-- 1 item -->
+        <div class="col-sm-12">
+          <div class="row">
+            <!-- image -->
+            <div class="col-md-3 text-center">
+              <img src="./alexa.jpg" alt="alexa" width="200px" class="p-3" />
+            </div>
+            <!-- text -->
+            <div class="col-md-6 pt-5">
+              <h3>Alexa Modal XF-1</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel,
+                dicta. kjbafbABFBAKJSFABSJVAJVSkj,
+              </p>
+            </div>
+            <div
+              class="col-md-3"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+              "
+            >
+              <!-- buttons -->
+              <div class="row">
+                <div class="col-5 text-end p-0">
+                  <button class="btn btn-light removeItem">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-dash"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="col-2 text-center align-self-center">
+                  <div id="localCounter" style="font-size: 1.2rem">0</div>
+                </div>
+                <div class="col-5 text-start p-0">
+                  <button class="btn btn-light addItem">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-plus-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- item 2 -->
+        <div class="col-sm-12">
+          <div class="row">
+            <!-- image -->
+            <div class="col-md-3 text-center">
+              <img src="./charger.jpg" alt="alexa" width="200px" class="p-3" />
+            </div>
+            <!-- text -->
+            <div class="col-md-6 pt-5">
+              <h3>Alexa Modal XF-1</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel,
+                dicta. kjbafbABFBAKJSFABSJVAJVSkj,
+              </p>
+            </div>
+            <div
+              class="col-md-3"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+              "
+            >
+              <!-- buttons -->
+              <div class="row">
+                <div class="col-5 text-end p-0">
+                  <button class="btn btn-light removeItem removeItem2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-dash"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="col-2 text-center align-self-center">
+                  <div id="localCounter2" style="font-size: 1.2rem">0</div>
+                </div>
+                <div class="col-5 text-start p-0">
+                  <button class="btn btn-light addItem addItem2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-plus-lg"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 50px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        pariatur eius laudantium quas incidunt aut beatae modi ad corporis
+        blanditiis doloribus quisquam necessitatibus, molestias nulla fugit vel
+        dolore ab quaerat quod. Nesciunt vel aliquam minima officia dolore
+        provident animi sequi, aliquid ab enim culpa temporibus assumenda.
+        Quisquam illum impedit deserunt quia, rem quasi, expedita perferendis
+        aliquid rerum laborum totam eius odio similique nulla modi quos. Illum
+        consectetur quo dolore error repellendus fugit ex, quas debitis, rem sed
+        necessitatibus nobis accusamus dolores sint eaque excepturi numquam.
+        Ipsam amet excepturi minus veritatis asperiores hic, optio inventore
+        esse quisquam consequuntur odio, veniam beatae et voluptatibus quas
+        molestiae. Laboriosam accusamus, dolorem minima commodi cum, corrupti
+        nihil exercitationem ducimus suscipit eius omnis? Tenetur, quia
+        voluptatibus? Laboriosam nihil voluptatum alias, suscipit voluptatibus
+        iure animi eius quidem dolore commodi laudantium cum perferendis
+        perspiciatis aut sint corporis modi quibusdam a minima odio explicabo.
+        Vel animi ut explicabo optio? Repellat et cupiditate quia placeat minima
+        in vel ex? Dolores, fugit consequatur? Fugiat vitae iste obcaecati
+        impedit! Repellat aliquid quasi, fugiat quod, enim aspernatur sunt atque
+        incidunt assumenda eveniet nesciunt, totam at architecto dolorem numquam
+        suscipit est repellendus nulla cumque repudiandae eum neque culpa ab
+        vitae! Delectus libero possimus aut expedita corporis earum cupiditate
+        molestias. Eaque suscipit, nemo officia excepturi vero eius minus odit
+        facere fuga quasi itaque at deleniti omnis harum impedit sit quisquam
+        facilis distinctio voluptate quo recusandae labore consequuntur eum.
+        Quis dolorum vel repellat ad, consequuntur quasi dolorem alias!
+        Blanditiis unde dolorem impedit doloribus cupiditate dolor consequuntur
+        cum voluptate commodi eveniet, distinctio iusto sequi, vitae qui culpa
+        corporis sint ex provident! Nostrum recusandae, ullam eaque repudiandae
+        maxime corrupti maiores, laudantium tempora ducimus aliquam dolore
+        deserunt labore possimus vel totam debitis asperiores exercitationem
+        optio sapiente delectus. Facilis officia voluptatibus ea, omnis saepe
+        repellat asperiores vel provident sunt et!
+      </p>
+      <button class="btn btn-dark scrollTop">Top</button>
+    </div>
+
+    <script src="./scripttask.js"></script>
+  </body>
+</html>

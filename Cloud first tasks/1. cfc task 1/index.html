@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="./algolia.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <div
+      class="navbar navbar-expand-sm text-bg-warning fixed-top mb-5"
+      id="navbar"
+    >
+      <div class="container-fluid justify-content-start">
+        <a href="#" class="navbar-brand">
+          <img
+            src="./algolia.svg"
+            alt=""
+            class="text-dark"
+            width="30px"
+            style="color: aliceblue"
+          />
+        </a>
+
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contactForm" class="nav-link">Register</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#table">table</a></li>
+              <li><a class="dropdown-item" href="#form">Form</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--alt img text -->
+    <section class="container my-5 pt-5">
+      <!-- row1 -->
+      <div class="row align-items-center">
+        <div class="col-sm-4 mb-5">
+          <img
+            src="./biryani-background-design-with-cartoon-style-vector.jpg"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-sm-8 text-center">
+          <h2>Sai Sweth. K</h2>
+          <p>I am a Intern at Cloud first. And this is my first task.</p>
+          <pre>Skills: HTML, CSS, bootstrap, JavaScript</pre>
+        </div>
+      </div>
+      <!-- row2 -->
+      <!-- <div class="row align-items-center">
+        <div class="col-sm-6 order-sm-2">
+          <img
+            src="./biryani-background-design-with-cartoon-style-vector.jpg"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-sm-6 text-center">
+          <h2>Sai Sweth. K</h2>
+          <p>I am a Intern at Cloud first. And this is my first task.</p>
+          <pre>Skills: HTML, CSS, bootstrap</pre>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Contact us Bootstrap form -->
+    <section class="container my-5 py-3 px-3" id="contactForm">
+      <h2>Register</h2>
+      <div class="row my-5">
+        <!-- <h1>Register</h1> -->
+        <div class="col-sm-6">
+          <form action="">
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              class="form-control form-control-lg mb-5"
+              name="fname"
+              id="fname"
+              placeholder="Yourname.."
+              required
+            />
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              class="form-control form-control-lg mb-5"
+              name="email"
+              id="email"
+              placeholder="example@mail.com"
+              required
+            />
+            <label for="purpose" class="float-start">Message:</label>
+            <textarea
+              class="form-control mb-3"
+              name="purpose"
+              id="purpose"
+              rows="7"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button
+              id="btnModal"
+              type="submit"
+              class="btn btn-primary btn-lg float-end"
+              herf="#"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+        <div class="col-sm-6 text-center">
+          <h2>Contact us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            pariatur laborum, vero quasi nisi odit enim quas provident soluta!
+            Qui!
+          </p>
+          <a
+            href="https://github.com/codewithsweth"
+            class="text-decoration-none text-dark"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- table -->
+    <section class="container" id="table">
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-dark">
+            <th>Name</th>
+            <th>gender</th>
+            <th>e-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-danger">person1</td>
+            <td class="table-info">male</td>
+            <td class="table-warning">example@mail.com</td>
+          </tr>
+          <tr>
+            <td class="table-danger">person2</td>
+            <td class="table-info">female</td>
+            <td class="table-warning">example@mail.com</td>
+          </tr>
+          <tr>
+            <td class="table-danger">person3</td>
+            <td class="table-info">othere</td>
+            <td class="table-warning">example@mail.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="container text-center">
+      <button id="btnModal" class="show-modal btn btn-success btn-block mb-5">
+        Register
+      </button>
+    </div>
+    <div class="mainModal hiddenModal">
+      <button class="close-modal">&times;</button>
+      <!-- HTml and css rigister form -->
+      <section class="container">
+        <h3 id="form">Form</h3>
+        <form action="/action_page.php" method="post" target="_top">
+          <label for="name">Name: </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Yourname.."
+          /><br />
+          <label for="gender">Gender: </label>
+          <select name="gender" id="gender">
+            <option value="Male" selected>Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+          <p>Job Position:</p>
+          <input type="radio" id="intern" name="Job-position" value="Intern" />
+          <label for="intern">Intern</label><br />
+          <input type="radio" id="junior" name="Job-position" value="junior" />
+          <label for="junior">Junior</label><br />
+          <input type="radio" id="senior" name="Job-position" value="senior" />
+          <label for="senior">Senior</label><br />
+
+          <p>Choose your favorite skills:</p>
+          <input type="checkbox" id="html" name="fav-skill" value="HTML" />
+          <label for="html">HTML</label>
+          <input type="checkbox" id="css" name="fav-skill" value="CSS" />
+          <label for="css">CSS</label>
+          <input type="checkbox" id="js" name="fav-skill" value="JS" />
+          <label for="js">JavaScript</label>
+          <input type="checkbox" id="react" name="fav-skill" value="react" />
+          <label for="react">React.JS</label>
+          <input type="checkbox" id="node" name="fav-skill" value="node" />
+          <label for="node">Node.JS</label><br />
+
+          <fieldset>
+            <legend>Important</legend>
+            <label for="user-name">Username</label>
+            <input type="text" id="user-name" name="username" /> <br />
+            <label for="password">password</label>
+            <input type="text" id="password" name="password" />
+            <label for="password">Confirm-password</label>
+            <input type="text" id="password" name="password" />
+          </fieldset>
+
+          <label for="reason">Why are you interested?</label><br />
+          <textarea name="reason" id="reason" cols="30" rows="5"></textarea
+          ><br />
+          <button type="button" onclick="alert('Thank You for registering')">
+            Submit
+          </button>
+        </form>
+      </section>
+    </div>
+    <div class="customOverlay hiddenModal"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

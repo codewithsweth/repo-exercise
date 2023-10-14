@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* contact */
+        #contact {
+            height: 100vh;
+        }
+
+        .outline {
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 20px;
+            font-weight: bold;
+            font-size: 2rem;
+            width: 60%;
+            float: left;
+        }
+
+        .outline-item {
+            display: flex;
+            align-items: center;
+
+        }
+
+
+        .outline input {
+            padding: 12px 20px;
+            margin: 20px 0 20px 10px;
+            width: 100%;
+            font-size: 1.5rem;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+
+
+        .btn {
+            border: none;
+            color: white;
+            padding: 14px 28px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #2196F3;
+
+        }
+
+        .btn.submit {
+            margin-top: 20px;
+            display: block;
+            background-color: #2196F3;
+            font-size: 2rem;
+            margin-left: 40%;
+        }
+
+        .social-media {
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            margin: 20px 20px;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .btn.google {
+            background-color: red;
+            color: white;
+            width: 300px;
+            align-self: center;
+        }
+
+        .btn.facebook {
+            background-color: #2196F3;
+            color: white;
+            width: 300px;
+            align-self: center;
+
+        }
+
+        .btn.twitter {
+            background-color: black;
+            color: white;
+            width: 300px;
+            align-self: center;
+        }
+
+
+        @media(max-width:1000px) {
+            .outline {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 10%;
+            }
+
+            .outline-item {
+                display: inline-block;
+                text-align: center;
+                width: 90%;
+            }
+
+            .btn.submit {
+                margin-left: 5%;
+            }
+
+            .social-media {
+                border-top: 2px solid lightgray;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-form" id="contact">
+        <form action="">
+            <div class="outline">
+                <div class="outline-item">
+                    <label for="first-name" style="margin-right: 50px;">Name: </label>
+                    <input type="text" name="first-name" id="first-name" placeholder="Your name.. ">
+                </div>
+
+                <div class="outline-item">
+                    <label for="last-name">Surname: </label>
+                    <input type="text" name="last-name" id="last-name" placeholder="Your surname">
+                </div>
+                <div class="outline-item">
+                    <label for="e-mail" style="margin-right: 75px;">Mail:</label>
+                    <input type="email" name="Mail" placeholder="example@gmail.com" id="e-mail">
+                </div>
+
+
+                <button class="btn submit">Submit</button>
+
+            </div>
+
+            <div class="social-media">
+                <button class="btn google"><a href="https://accounts.google.com/b/0/AddMailService">Login with
+                        Google</a></button>
+                <button class="btn facebook"><a href="https://www.facebook.com/login/">Login with Facebook</a></button>
+                <button class="btn twitter"><a href="https://twitter.com/?lang=en-in">Login with Twitter</a></button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

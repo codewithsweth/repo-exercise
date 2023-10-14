@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+.container{
+  margin-top: 3rem;
+
+}
+
+.show-modal {
+  z-index: 100;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 1rem;
+  margin: 5rem 2rem;
+  border: none;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+
+  position: fixed;
+  top: 0px;
+  width: 150px;
+  right: 7rem;
+}
+.show-modal:active{
+  background-color: #fff;
+
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.close-submit {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hiddenModal {
+  display: none;
+}
+
+.mainModal {
+  position: absolute;
+  top: 50%;
+  right: -19%;
+  /* right: -90%; */
+  transform: translate(-50%, -50%);
+  width: 40%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  font-size: 2rem;
+    font-weight: 700;
+
+    /* opacity: 0; */
+    animation-name: example;
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+
+}
+@keyframes example {
+  0%   {opacity: 0; top: 0; right: -90%;}
+  100% {opacity: 100; top: 50%; right: -19%;}
+}
+
+
+.customOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* backdrop-filter: blur(3px); */
+  z-index: 5;
+  animation-name: example2;
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+  
+}
+@keyframes example2 {
+  0%   {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+/* main */
+  /* products list */
+  .products-list {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+  }
+
+/* product items list view */
+
+.products{
+    height: 100%;
+    width: 75%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 400px 400px;
+}
+
+.products img{
+    width: 200px;
+}
+
+.products .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.products .item .item-container{
+    width: 250px;
+    height: 90%;
+    background-color: #000;
+    border-radius: 25px;
+    position: relative;
+}
+
+.products .item .item-container .item-img{
+    width: 100%;
+    height: 60%;
+
+    background-color: white;
+
+    border: 1px solid #000;
+    border-radius: 25px 25px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.products .item .item-container .desc{
+    color: aliceblue;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 30px;
+    /* align-items: center; */
+}
+.products .item .item-container .add-to-cart{
+    background-color: rgba(81, 187, 254, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.products .item .item-container .add-to-cart img{
+    width: 30px;
+    height: 30px;
+
+    padding: 5px;
+}
+
+/* cart */
+
+.cart-header{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+/* item posi */
+.cart-items{
+  max-height: calc(100vh - 247px);
+  overflow-y: auto;
+overflow-x: hidden;
+}
+
+.cart-item{
+  display: flex;
+  justify-content: space-around;
+  padding:0 0 45px 0;
+}
+
+.cart-item div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item .item-info{
+  flex: 1;
+  background-color: rgba(0, 72, 255, 0.6);
+  border-radius: 0 10px 10px 0;
+  padding: 10px;
+
+}
+.cart-item .item-info:hover{
+  background-color: rgba(255, 0, 0, 0.6);
+  cursor: pointer;
+}
+.cart-item .item-info img {
+  width: 75px;
+}
+
+.cart-item .unit-price{
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.cart-item .units{
+  flex: 1;
+}
+
+
+.cart-item .units .number {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.cart-item .units .btn {
+  width: 20px;
+  height: 20px;  
+  background-color: rgb(242, 255, 58);
+  border-radius: 50%;  
+  font-weight: bold;  
+  cursor: pointer;
+}
+
+.cart-footer {
+  width: 100%;
+  background-color: rgb(255, 21, 21);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  border-left: 1px solid rgb(var(--right-side-bg-color));
+}
+.cart-footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 0;
+
+  font-size: 1.3rem;
+}
+.cart-footer .subtotal {
+  background-color: white;
+}
+.cart-footer .checkout {
+  background-color: rgb(242, 255, 58);
+
+  cursor: pointer;
+}
+
+/* @media(max-width:500px){
+  body{
+    flex-direction: column;
+  }
+} */
+
+
+/* ///////////////////////////// */
+/* ///////////////////////////// */
+/* form */
+.formRow{
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+#form{
+  width: 350px;
+  margin: 20vh;
+  padding: 20px 40px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.formCol{
+  display: flex;
+  justify-content: center;
+}
+
+#form h2{
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#form button{
+  /* padding: 10px; */
+  margin-top: 10px;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.input-control input{
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+}
+.input-control input:focus{
+  outline: 0;
+}
+.input-control.success input{
+  border-color:green ;
+}
+.input-control.error input{
+  border-color: red;
+}
+
+.input-control .error{
+  color: red;
+  font-size: 9px;
+  height: 13px;
+}
+/* submitted modal */
+.submitModal{
+  margin: 30px;
+  padding: 20px;
+  width: 50%;
+  margin-left: 25%;
+  /* transform: translate(-50%, -50%); */
+  background-color: whitesmoke;
+  color: #000;
+  box-shadow: 0 0 2rem black;
+  z-index: 999;
+
+  position: relative;
+}

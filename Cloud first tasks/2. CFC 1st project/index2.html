@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="nav-bar" id="nav-list">
+        <a href="#home" class="nav-item" id="nav-item1">Home</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#contact" class="nav-item">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+    </div>
+    <!-- Hero -->
+    <div class="hero-box">
+        <h3 class="hero-quote">“Love your family, work super hard, live your passion.”</h3>
+        <div>
+            <img class="hero-img" src="./images/box8_image.jpg" alt="">
+            <p>Hey, there</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus eos necessitatibus tenetur. Laboriosam
+                esse iusto molestias reprehenderit corporis ea maiores aut cum, tempora dolore maxime illum doloribus
+                minima beatae natus!</p>
+        </div>
+    </div>
+    <!-- skills -->
+    <!-- gallery -->
+    <div class="grid-container">
+        <div class="grid item1"></div>
+        <div class="grid item2"></div>
+        <div class="grid item3"></div>
+        <div class="grid item4"></div>
+        <div class="grid item5"></div>
+        <div class="grid overtitle">
+            <a class="cover-text" href="#contact">Sign Up</a>
+        </div>
+
+    </div>
+
+
+    <!-- login -->
+    <div class="contact-form" id="contact">
+        <form action="">
+            <div class="outline">
+                <div class="outline-item">
+                    <label for="first-name" style="margin-right: 50px;">Name: </label>
+                    <input type="text" name="first-name" id="first-name" placeholder="Your name.. ">
+                </div>
+
+                <div class="outline-item">
+                    <label for="last-name">Surname: </label>
+                    <input type="text" name="last-name" id="last-name" placeholder="Your surname">
+                </div>
+                <div class="outline-item">
+                    <label for="e-mail" style="margin-right: 75px;">Mail:</label>
+                    <input type="email" name="Mail" placeholder="example@gmail.com" id="e-mail">
+                </div>
+
+
+                <button class="btn submit">Submit</button>
+
+            </div>
+
+            <div class="social-media">
+                <button class="btn google"><a href="https://accounts.google.com/b/0/AddMailService">Login with
+                        Google</a></button>
+                <button class="btn facebook"><a href="https://www.facebook.com/login/">Login with Facebook</a></button>
+                <button class="btn twitter"><a href="https://twitter.com/?lang=en-in">Login with Twitter</a></button>
+            </div>
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-box">
+            <div class="footer-list">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact us</a> </li>
+                    <li><a href="#">help</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact us</a> </li>
+                    <li><a href="#">help</a></li>
+                </ul>
+            </div>
+
+            <div class="icons-social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-discord"></i>
+            </div>
+            <div class="footer-cr"><small>@Copyright k.Sai Sweth</small></div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("nav-list");
+            if (x.className === "nav-bar") {
+                x.className += " response";
+            } else {
+                x.className = "nav-bar";
+            }
+        }
+    </script>
+</body>
+
+</html>

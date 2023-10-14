@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modals window</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="products">
+          <!-- display products -->
+          <!-- <div class="item">
+            <div class="item-container">
+              <div class="item-img">
+                <img src="./img/t1.png" alt="T-shirt 1" />
+              </div>
+              <div class="desc">
+                <h2>T-Shirt 1</h2>
+                <h2><small>$</small>29.99</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Consectetur, cupiditate.
+                </p>
+                <div class="add-to-cart">
+                  <img src="./icons/bag-plus.png" alt="add to cart" />
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <button class="show-modal" onclick="goToTop()">
+          Cart
+          <p
+            style="
+              display: inline;
+              background-color: yellow;
+              padding: 5px;
+              border-radius: 10px;
+            "
+            class="total-items-in-cart"
+          >
+            0
+          </p>
+        </button>
+
+        <div class="mainModal hiddenModal">
+          <button class="close-modal">&times;</button>
+          <div class="cart">
+            <div class="cart-header">
+              <div class="column1">Item</div>
+              <div class="column2">Unit price</div>
+              <div class="column3">Units</div>
+            </div>
+            <!-- render cart items here -->
+            <div class="cart-items">
+              <!-- <div class="cart-item">
+                <div class="item-info">
+                  <img src="./img/t1.png" alt="t-shirt 1" />
+                  <h4>T-shirt 1</h4>
+                </div>
+                <div class="unit-price"><small>$</small>29.99</div>
+                <div class="units">
+                  <div class="btn minus">-</div>
+                  <div class="number">1</div>
+                  <div class="btn plus">+</div>
+                </div>
+              </div> -->
+            </div>
+            <div class="cart-footer">
+              <div class="subtotal">Subtotal (0 items): $0</div>
+              <div
+                id="loadingButton"
+                onclick="addLoadingAnimation()"
+                class="checkout save-btns"
+              >
+                Proceed to checkout
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="customOverlay hiddenModal"></div>
+      </div>
+      <div class="row formRow">
+        <div class="row">
+          <div class="col formCol">
+            <!-- form -->
+            <form action="/" id="form">
+              <h2>Registration</h2>
+              <!-- item1 -->
+              <div class="input-control">
+                <label for="username">Username: </label>
+                <input id="username" name="username" type="text" />
+                <div class="error"></div>
+              </div>
+              <!--  -->
+              <div class="input-control">
+                <label for="email">E-mail: </label>
+                <input id="email" name="e-mail" type="text" />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="phoneno">Telephone no:</label>
+                <input id="phoneno" name="contact-phone" type="tel" />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="password">Password:</label>
+                <input id="password" name="password" type="password" />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="password2">Password again:</label>
+                <input id="password2" name="password2" type="password" />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date" />
+                <div class="error"></div>
+              </div>
+
+              <button type="submit" id="formButton" class="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="submitModal">
+            <div class="showModal">
+              <button class="close-submit">&times;</button>
+              <h2>Submitted</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                placeat laborum deleniti ex, adipisci ea eos temporibus, quis
+                saepe voluptatibus id! Soluta obcaecati adipisci debitis eveniet
+                amet, quam voluptatem similique?
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="./products.js"></script>
+    <script src="./app.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="./form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSK</title>
+  <link rel="icon" href="./algolia.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <div class="nav-bar" id="nav-list">
+    <a href="./boot.html" class="nav-item" id="nav-item1"><i class="fa-brands fa-algolia"></i></a>
+    <a id="navitem" href="./boot.html" class="nav-item">Home</a>
+    <a id="navitem" href="#projects" class="nav-item">Projects</a>
+    <a id="navitem" href="./contactUs.html" class="nav-item">Contact Us</a>
+
+    <a href="./signup.html" class="nav-item" id="singupbro">Sign Up</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!-- main -->
+  <section id="layout">
+    <!-- gallery -->
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-lg-3 col-md-6">
+          <img src="./main/images/1.webp" class="w-100 rounded mb-3  " alt="image" />
+          <img src="./main/images/2.webp" class="w-100 rounded mb-3  " alt="image" />
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <img src="./main/images/3.webp" class="w-100 rounded mb-3" alt="image" />
+          <img src="./main/images/4.webp" class="w-100 rounded mb-3" alt="image" />
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <img src="./main/images/5.webp" class="w-100 rounded mb-3" alt="image" />
+          <img src="./main/images/6.webp" class="w-100 rounded mb-3" alt="image" />
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <img src="./main/images/3.webp" class="w-100 rounded mb-3" alt="image" />
+          <img src="./main/images/4.webp" class="w-100 rounded mb-3" alt="image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <!-- hero -->
+    <div class="hero-box">
+      <h3 class="hero-quote">
+        “Love your family, work super hard, live your passion.”
+      </h3>
+      <div>
+        <img class="hero-img" src="./images/box6_image.jpg" alt="" />
+        <p style="color: grey">K.Sai Sweth</p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+          eos necessitatibus tenetur. Laboriosam esse iusto molestias
+          reprehenderit corporis ea maiores aut cum, tempora dolore maxime
+          illum doloribus minima beatae natus!
+        </p>
+      </div>
+    </div>
+    <!-- projects -->
+    <section id="projects" class="project">
+      <h2 class="project-title">Projects</h2>
+      <div id="project1" class="container flex-item1">
+        <div class="image-side">
+          <img src="./home/images/maggg.png" alt="img" width="" height="500px" />
+        </div>
+        <div class="content-side">
+          <div>
+            <h3>Painting</h3>
+            <p>This is a painting done using css-grid.</p>
+            <pre>
+                        <h4>Skills:</h4><p>html, css, grid</p> 
+                    </pre>
+
+            <a href="http://127.0.0.1:5500/10.3%20Mondrian%20Project/solution.html" id="learnmore">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div id="project2" class="flex-item2">
+        <div class="image-side">
+          <img src="./home/images/price.png" alt="img" width="" height="500px" />
+        </div>
+        <div class="content-side">
+          <div>
+            <h3>Pricing</h3>
+            <p>
+              This is a template done using css-flexbox. It is also built for
+              mobile devices.
+            </p>
+            <pre>
+                        <h4>Skills:</h4><p>html, css, flexbox, responsive.</p> 
+                    </pre>
+            <a href="http://127.0.0.1:5500/9.4%20Flexbox%20Pricing%20Table%20Project/solution.html" id="learnmore">Learn
+              more</a>
+          </div>
+        </div>
+      </div>
+      <div id="project3" class="flex-item1">
+        <div class="image-side">
+          <img src="./home/images/desige1.png" alt="img" width="" height="500px" />
+        </div>
+        <div class="content-side">
+          <div>
+            <h3>Design Agency</h3>
+            <p>This is a website done using css-flex and images.</p>
+            <pre>
+                        <h4>Skills:</h4><p>html, css, flexbox, image positioning, responsive.</p> 
+                    </pre>
+            <a href="http://127.0.0.1:5500/8.4%20Web%20Design%20Agency%20Project/solution.html" id="learnmore">Learn
+              more</a>
+          </div>
+        </div>
+      </div>
+      <div id="project4" class="flex-item2">
+        <div class="image-side">
+          <img src="./home/images/flag.png" alt="img" width="" height="500px" />
+        </div>
+        <div class="content-side">
+          <div>
+            <h3>Flag</h3>
+            <p>
+              This is a painting done using css-grid Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Veritatis, rerum!
+            </p>
+            <pre>
+                       <h4>Skills:</h4><p>html, css positioning</p> 
+                    </pre>
+            <a href="http://127.0.0.1:5500/7.3%20CSS%20Flag%20Project/solution.html" id="learnmore">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- footer -->
+  <footer>
+    <div class="footer-box">
+      <div class="footer-list">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact us</a></li>
+          <li><a href="#">help</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#skills"><b style="text-decoration: underline">Skills</b></a>
+          </li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">javascript</a></li>
+          <li><a href="#">React</a></li>
+          <li><a href="#">SQL</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#projects"><b style="text-decoration: underline">Projects</b></a>
+          </li>
+          <li><a href="#project1">Project1</a></li>
+          <li><a href="#project2">Project2</a></li>
+          <li><a href="#project3">Project3</a></li>
+          <li><a href="#project4">Project4</a></li>
+        </ul>
+      </div>
+
+      <div class="icons-social">
+        <a href="#" class="fa-brands fa-facebook"></a>
+        <a href="#" class="fa-brands fa-twitter"></a>
+        <a href="#" class="fa-brands fa-linkedin"></a>
+        <a href="#" class="fa-brands fa-github"></a>
+        <a href="#" class="fa-brands fa-discord"></a>
+      </div>
+      <div class="footer-cr"><small>@Copyright k.Sai Sweth</small></div>
+    </div>
+  </footer>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("nav-list");
+      if (x.className === "nav-bar") {
+        x.className += " response";
+      } else {
+        x.className = "nav-bar";
+      }
+    }
+  </script>
+</body>
+
+</html>
