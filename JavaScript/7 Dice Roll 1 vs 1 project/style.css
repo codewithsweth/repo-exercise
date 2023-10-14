@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+
+    height: 100vh;
+    color: #333;
+    background-image: linear-gradient(to top left, blue 0%, black 100%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    position: relative;
+    width: 100rem;
+    height: 60rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+.player-active{
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.4);;
+}
+
+.player{
+    display: flex;
+    flex: 50%;
+    padding: 9rem;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+}
+
+.name{
+    position: relative;
+    font-size: 4rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 1rem;
+}
+.score{
+    font-size: 8rem;
+    color: darkblue;
+    margin-bottom: auto;
+}
+.current{
+    background-color: darkblue;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    width: 65%;
+    border-radius: 10px;
+    transition: all 0.75s;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.current-label{
+margin-bottom: 1rem;
+font-size: 1.7rem;
+}
+.current-score{
+    font-size: 3.5rem;
+}
+
+
+/* to hide image */
+.hidden{
+    display: none;
+}
+/* image */
+.dice{
+    position: absolute;
+    width: 10rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+/* button style */
+.btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    background: none;
+    /* border-color: rgba(255, 255, 255, 0.6); */
+    border: none;
+    font-family: inherit;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* font-weight: 400; */
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    transition: 0.1s;
+    padding: 1rem 2.5rem;
+    border-radius: 50rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+/* individual buttons */
+.btn-new{
+    top: 7%;
+    
+}
+.btn-roll{
+    top: 70%;
+    
+}
+.btn-hold{
+    top: 80%;
+    
+}
+
+.player-winner{
+    background-color: #333;
+    color: white;
+}
+
+/* .player-winner .name{
+    color: white;
+} */

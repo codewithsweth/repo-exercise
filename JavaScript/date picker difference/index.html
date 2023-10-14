@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Date Difference in Days</title>
+  </head>
+  <body>
+    div.constr
+    <input type="date" id="d1" />
+    <input type="date" id="d2" />
+    <button onClick="calculateDays()">Get Difference</button>
+    <p id="output"></p>
+  </body>
+  <script>
+    function calculateDays() {
+      var d1 = document.getElementById("d1").value;
+      console.log(d1)
+      var d2 = document.getElementById("d2").value;
+      console.log(d2)
+      const dateOne = new Date(d1);
+      console.log(dateOne)
+      const dateTwo = new Date(d2);
+      console.log(dateTwo)
+      const time = Math.abs(dateTwo -  dateOne);
+      console.log(time)
+      const days = Math.ceil(time / (1000 * 60 * 60 * 24));
+      console.log(days)
+      document.getElementById("output").innerHTML = days;
+    }
+  </script>
+  </html>
+  <!-- <!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+  <body>
+    <form>
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start-date" />
+
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" name="end-date" />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("#start-date", {
+        enableTime: false,
+        dateFormat: "Y-m-d",
+      });
+
+      flatpickr("#end-date", {
+        enableTime: false,
+        dateFormat: "Y-m-d",
+      });
+
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const startDate = document.querySelector("#start-date").value;
+          const endDate = document.querySelector("#end-date").value;
+
+          // You can use the selected dates for further processing
+          console.log("Start Date: " + startDate);
+          console.log("End Date: " + endDate);
+        });
+    </script>
+  </body>
+</html> -->
+</html>
